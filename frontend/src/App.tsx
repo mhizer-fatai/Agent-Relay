@@ -1275,6 +1275,7 @@ const client = new AgentRelayClient({
             onClick={() => { window.location.hash = '#/'; }} 
             style={{ cursor: 'pointer' }}
           >
+            <img src="/logo.png" alt="AgentRelay Logo" style={{ width: '32px', height: '32px', borderRadius: '6px', objectFit: 'cover' }} />
             AgentRelay
           </div>
           <div className="navbar-links">
@@ -1532,6 +1533,7 @@ const client = new AgentRelayClient({
       {/* Dashboard Left Sidebar */}
       <aside className="sidebar">
         <div className="logo-container" style={{ fontSize: '1.6rem' }}>
+          <img src="/logo.png" alt="AgentRelay Logo" style={{ width: '32px', height: '32px', borderRadius: '6px', objectFit: 'cover' }} />
           AgentRelay
         </div>
 
