@@ -29,6 +29,7 @@ state.json
 .gemini/
 agent_rule.md
 download_sui.ps1
+mem_*.json
 
 # Move/Sui compiler artifacts
 move/build/
