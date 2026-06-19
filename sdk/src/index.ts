@@ -641,7 +641,7 @@ export class AgentRelayClient {
         let uploadUrl = "";
         let isBackendRelay = false;
         if (this.config.walrusServerUrl) {
-          if (this.config.walrusServerUrl.includes("localhost") || this.config.walrusServerUrl.includes("127.0.0.1") || this.config.walrusServerUrl.includes("/api/")) {
+          if (!this.config.walrusServerUrl.includes("walrus.space") && !this.config.walrusServerUrl.includes("walrus.xyz")) {
             isBackendRelay = true;
             uploadUrl = this.config.walrusServerUrl.endsWith('/')
               ? `${this.config.walrusServerUrl}api/walrus/upload`
