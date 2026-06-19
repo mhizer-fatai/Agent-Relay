@@ -120,9 +120,9 @@ function parseMarkdownToJsx(text: string) {
 // Component to render interactive documentation chapters with navigation
 function DocumentationViewer({ activeDocId, setActiveDocId }: { activeDocId: string, setActiveDocId: (id: string) => void }) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: '40px', marginTop: '40px', alignItems: 'start' }}>
+    <div className="docs-viewer-layout">
       {/* Sidebar chapters navigator */}
-      <div style={{ padding: '20px', position: 'sticky', top: '40px', background: 'transparent' }}>
+      <div className="docs-sidebar-wrapper">
         <h3 style={{ fontSize: '1.25rem', marginBottom: '16px', color: 'var(--accent-green-light)', paddingBottom: '12px' }}>
           Documentation Chapters
         </h3>
@@ -157,7 +157,7 @@ function DocumentationViewer({ activeDocId, setActiveDocId }: { activeDocId: str
       </div>
 
       {/* Main content display area */}
-      <div style={{ padding: '0 40px 40px 40px', minHeight: '600px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', background: 'transparent' }}>
+      <div className="docs-content-wrapper">
         <div>
           {DOCS_DATA.filter(doc => doc.id === activeDocId).map(doc => (
             <div key={doc.id}>
@@ -1323,7 +1323,7 @@ const client = new AgentRelayClient({
               </ScrollReveal>
               
               {/* Detailed list of issues and problems of AI */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px', marginBottom: '60px' }}>
+              <div className="grid-two-cols" style={{ marginBottom: '60px' }}>
                 <ScrollReveal>
                   <div className="glass-panel" style={{ padding: '36px', height: '100%' }}>
                     <h3 style={{ fontSize: '1.45rem', marginBottom: '12px', fontWeight: 600, color: 'var(--accent-green-light)' }}>Statelessness & Session Amnesia</h3>
@@ -1351,7 +1351,7 @@ const client = new AgentRelayClient({
               </ScrollReveal>
 
               {/* Solutions architecture layout */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+              <div className="grid-two-cols">
                 <ScrollReveal>
                   <div className="glass-panel" style={{ padding: '36px', height: '100%' }}>
                     <h3 style={{ fontSize: '1.45rem', marginBottom: '12px', fontWeight: 600, color: 'var(--accent-green-light)' }}>Decentralized Memory List</h3>
