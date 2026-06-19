@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "importanceScore": 9,
+  "project_context": {
+    "project_id": "defi_arb_001",
+    "name": "DeFi Arbitrage Brain",
+    "mission": "Execute gas-efficient cross-protocol arbitrage trades on SUI networks.",
+    "vision": "Provide automated, yield-optimizing liquidity routing across decentralized exchanges.",
+    "problem_statement": "Price discrepancies between DEX pools cause capital inefficiencies.",
+    "core_features": ["Flash loan routing", "Pool depth evaluation", "Gas limit calculation"],
+    "current_phase": "Production",
+    "success_metrics": ["Net profit per transaction > 0.05 SUI", "Trade execution time < 800ms"]
+  },
+  "state": [
+    {
+      "entity": "active_pools",
+      "state": {
+        "cetus_sui_usdc": "0x123cetus...",
+        "kriya_sui_usdc": "0x456kriya..."
+      }
+    }
+  ],
+  "semantic": [
+    {
+      "entity": "dex_slippage",
+      "fact": "Cetus SUI/USDC pool has lower slippage for trades under 1000 SUI compared to Kriya.",
+      "confidence": 0.95
+    }
+  ],
+  "procedural": [
+    {
+      "skill": "execute_arbitrage_hop",
+      "steps": ["check_depth_difference", "request_flash_loan", "swap_on_cetus", "repay_loan_on_kriya"]
+    }
+  ],
+  "episodic": [
+    {
+      "id": "evt_arb_001",
+      "event": "successful_arbitrage_execution",
+      "actions": ["execute_swap"],
+      "outcome": "Profit of 0.12 SUI secured"
+    }
+  ],
+  "graph": [
+    {
+      "node": "arbitrage-trader",
+      "edges": [
+        { "relation": "interacts_with", "target": "cetus_pool" },
+        { "relation": "interacts_with", "target": "kriya_pool" }
+      ]
+    }
+  ]
+}

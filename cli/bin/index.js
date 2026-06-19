@@ -11,8 +11,8 @@ import { AgentRelayClient } from '@agentrelay/sdk';
 const program = new Command();
 const CONFIG_DIR = path.join(os.homedir(), '.agentrelay');
 const CONFIG_FILE = path.join(CONFIG_DIR, 'config.json');
-const BACKEND_URL = process.env.AGENTRELAY_BACKEND_URL || 'http://localhost:3000';
-const DASHBOARD_URL = process.env.AGENTRELAY_DASHBOARD_URL || 'http://localhost:5173';
+const BACKEND_URL = process.env.AGENTRELAY_BACKEND_URL || 'https://agent-relay-backend.onrender.com';
+const DASHBOARD_URL = process.env.AGENTRELAY_DASHBOARD_URL || 'https://agent-relay.netlify.app';
 
 // Ensures local user config directory and file exist
 function getAuthCredentials() {

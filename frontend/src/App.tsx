@@ -259,7 +259,7 @@ function DocumentationViewer({ activeDocId, setActiveDocId }: { activeDocId: str
 
 const PACKAGE_ID = "0x9d3d5bcc0f72d498b7acb18057f8e2b9fde36abe37f9da986d767107f52b1314";
 const MARKETPLACE_ID = "0xa48a4654d2ed86941c2d69ebb29f147c74d7af6c4e30a15079ba2f21c52e3fd9";
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://agent-relay-backend.onrender.com";
 
 // Instantiates client client-side with configuration parameters
 const client = new AgentRelayClient({

@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "importanceScore": 7,
+  "project_context": {
+    "project_id": "dev_assistant_003",
+    "name": "DevOps Coding Assistant",
+    "mission": "Automate refactoring, testing, and continuous integration pipelines for web applications.",
+    "vision": "Provide seamless developer agent support directly inside code editors and CLI terminals.",
+    "problem_statement": "Repetitive boilerplate coding and configuration errors slow down feature delivery.",
+    "core_features": ["Boilerplate generator", "Lint auto-fixer", "GitHub Actions manager"],
+    "current_phase": "Beta",
+    "success_metrics": ["Build success rate > 98%", "Developer time saved > 4 hours/week"]
+  },
+  "state": [
+    {
+      "entity": "active_git_branch",
+      "state": {
+        "branch": "main",
+        "last_commit": "e4d30d0"
+      }
+    }
+  ],
+  "semantic": [
+    {
+      "entity": "npm_dependency_handling",
+      "fact": "Monorepo structures are cleaner when workspace dependencies are linked directly using peerDependencies or npm workspaces.",
+      "confidence": 0.92
+    }
+  ],
+  "procedural": [
+    {
+      "skill": "trigger_deploy_workflow",
+      "steps": ["run_lint_checks", "run_unit_tests", "trigger_github_pages_deploy"]
+    }
+  ],
+  "episodic": [
+    {
+      "id": "evt_dev_001",
+      "event": "build_verification_completed",
+      "actions": ["execute_npm_build"],
+      "outcome": "React app bundle built successfully in 1.42s"
+    }
+  ],
+  "graph": [
+    {
+      "node": "dev-assistant",
+      "edges": [
+        { "relation": "configures", "target": "github_workflows" },
+        { "relation": "maintains", "target": "dashboard_codebase" }
+      ]
+    }
+  ]
+}

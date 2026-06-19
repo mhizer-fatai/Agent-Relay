@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "importanceScore": 8,
+  "project_context": {
+    "project_id": "move_auditor_002",
+    "name": "Sui Move Vulnerability Scanner",
+    "mission": "Audit Sui Move smart contract source code for reentrancy, integer overflows, and privilege escalation vulnerabilities.",
+    "vision": "Become the gold-standard security co-pilot for Move language developers.",
+    "problem_statement": "Manual code reviews of smart contracts are slow and prone to human oversight.",
+    "core_features": ["AST parsing", "Vulnerability pattern matching", "Report generation"],
+    "current_phase": "Alpha",
+    "success_metrics": ["False positive rate < 15%", "Scan speed < 3 seconds per module"]
+  },
+  "state": [
+    {
+      "entity": "active_rules",
+      "state": {
+        "check_tx_sender": true,
+        "check_overflow": true
+      }
+    }
+  ],
+  "semantic": [
+    {
+      "entity": "vulnerability_patterns",
+      "fact": "Reentrancy is generally prevented in Move by its strict resource borrow checker, but logical reentrancy remains possible in custom storage layouts.",
+      "confidence": 0.98
+    }
+  ],
+  "procedural": [
+    {
+      "skill": "scan_module",
+      "steps": ["extract_ast", "apply_pattern_matchers", "verify_object_ownership_logic", "generate_pdf_report"]
+    }
+  ],
+  "episodic": [
+    {
+      "id": "evt_aud_001",
+      "event": "contract_analysis_complete",
+      "actions": ["parse_move_ast"],
+      "outcome": "Detected 2 warnings in intelligence_market.move"
+    }
+  ],
+  "graph": [
+    {
+      "node": "move-auditor",
+      "edges": [
+        { "relation": "analyzes", "target": "move_modules" }
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@ class AgentRelayMemoryEngine:
         self.agent_name = agent_name
         self.api_key = api_key or os.getenv("AGENTRELAY_API_KEY")
         self.visibility = visibility
-        self.backend_url = backend_url or os.getenv("AGENTRELAY_BACKEND_URL", "http://localhost:3000")
+        self.backend_url = backend_url or os.getenv("AGENTRELAY_BACKEND_URL", "https://agent-relay-backend.onrender.com")
         self.connection_string = connection_string
         self.sync_interval = sync_interval
         self.max_token_limit = max_token_limit
