@@ -1,0 +1,21 @@
+{
+  "name": "@agentrelay/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Developer CLI tool for Sovereign Intelligence Protocol & Memory Marketplace",
+  "main": "bin/index.js",
+  "bin": {
+    "agentrelay": "./bin/index.js",
+    "ar": "./bin/index.js",
+    "relay": "./bin/index.js"
+  },
+  "scripts": {
+    "start": "node bin/index.js"
+  },
+  "dependencies": {
+    "@agentrelay/sdk": "file:../sdk",
+    "axios": "^1.7.2",
+    "commander": "^12.1.0",
+    "open": "^10.1.0"
+  }
+}
